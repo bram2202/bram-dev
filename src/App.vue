@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import NameHolder from './components/NameHolder.vue'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-
+import ContentHolder from './components/ContentWrapper.vue'
 
 </script>
-
 <template>
   <header>
-    <font-awesome-icon icon="fa-solid fa-computer" width="125" height="125" class="logo"/>
+    <font-awesome-icon icon="fa-solid fa-computer" width="125" height="125" class="logo" />
     <div class="wrapper">
-       <NameHolder msg="Bram van Deventer" /> 
+      <ContentHolder msg="Bram van Deventer" />
     </div>
   </header>
-
 </template>
 
 <style scoped>
@@ -26,32 +22,7 @@ header {
   margin: 0 auto 2rem;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-.logo{
+.logo {
   font-size: 100px;
   color: hsla(160, 100%, 37%, 0.5);
 }
