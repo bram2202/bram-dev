@@ -1,11 +1,9 @@
-name: Docker Image
+name: Create docker Image and push
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+"
     
 env:
   REGISTRY: ghcr.io
@@ -24,7 +22,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install cosign
-        if: github.event_name != 'pull_request'
         uses: sigstore/cosign-installer@9becc617647dfa20ae7b1151972e9b3a2c338a2b # v2.8.1
         with:
           cosign-release: 'v1.11.0'
@@ -33,7 +30,6 @@ jobs:
         uses: docker/setup-buildx-action@8c0edbc76e98fa90f69d9a2c020dcb50019dc325
 
       - name: Log into registry ${{ env.REGISTRY }}
-        if: github.event_name != 'pull_request'
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
           registry: ${{ env.REGISTRY }}
@@ -55,7 +51,7 @@ jobs:
         uses: docker/build-push-action@ffe65bfc276d2ef003d5ea483a9947a8f6d408da
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
