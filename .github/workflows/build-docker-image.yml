@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Docker buildx
-        uses: docker/setup-buildx-action@c252a3bb80dae98127b9329b8aa1ff35b71ae980
+        uses: docker/setup-buildx-action@165fe681b849eec43aaa64d786b9ec53e690475f
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
