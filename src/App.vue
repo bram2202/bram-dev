@@ -41,7 +41,7 @@ header {
 }
 
 .confetti-container {
-  position: absolute;
+  position: absolute !important; 
 }
 
 @media (min-width: 1024px) {
