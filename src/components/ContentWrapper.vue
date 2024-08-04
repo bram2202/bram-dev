@@ -20,7 +20,7 @@ h1 {
   font-weight: 500;
   font-size: 2.6rem;
   top: -10px;
-  color: hsla(160, 100%, 37%, 1);  
+  color: hsla(160, 100%, 37%, 1);
 }
 
 h3 {
@@ -30,6 +30,11 @@ h3 {
 .wrapper h1,
 .info h3 {
   text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 1024px) {
