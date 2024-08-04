@@ -19,4 +19,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8080
-CMD [ "http-server", "dist","--ssl","--cert","certs/cert1.pem","--key","certs/privkey1.pem" ]
+CMD [ "http-server", "dist" ]

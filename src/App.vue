@@ -1,3 +1,13 @@
+<template>
+  <ConfettiExplosion v-if="visible" :stageHeight="screenHeight" :stageWidth="screenWidth" />
+  <header>
+    <font-awesome-icon icon="fa-solid fa-computer" width="125" height="125" class="logo" @click="explode" />
+    <div class="wrapper">
+      <ContentHolder msg="Bram van Deventer" />
+    </div>
+  </header>
+</template>
+
 <script setup lang="ts">
 import { nextTick, ref } from "vue";
 import ContentHolder from './components/ContentWrapper.vue'
@@ -13,15 +23,7 @@ const explode = async () => {
 };
 
 </script>
-<template>
-  <ConfettiExplosion v-if="visible" :stageHeight="screenHeight" :stageWidth="screenWidth" />
-  <header>
-    <font-awesome-icon icon="fa-solid fa-computer" width="125" height="125" class="logo" @click="explode" />
-    <div class="wrapper">
-      <ContentHolder msg="Bram van Deventer" />
-    </div>
-  </header>
-</template>
+
 
 <style scoped>
 header {
