@@ -6,7 +6,6 @@ import LinkItem from './LinkItem.vue';
     <div>
         <LinkItem title="Github" link="https://github.com/bram2202" />
         <LinkItem title="LinkedIn" link="https://www.linkedin.com/in/bramvandeventer/" />
-        <LinkItem title="De dorstige ICTer (Untappd)" link="https://untappd.com/DeDorstigeICTer"/>
     </div>
 </template>
 
