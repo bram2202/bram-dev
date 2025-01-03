@@ -4,8 +4,8 @@ import LinkItem from './LinkItem.vue';
 
 <template>
     <div>
-        <LinkItem title="Github" link="https://github.com/bram2202" />
-        <LinkItem title="LinkedIn" link="https://www.linkedin.com/in/bramvandeventer/" />
+        <LinkItem title="Github" link="https://github.com/bram2202" icon="mdi-github"  />
+        <LinkItem title="LinkedIn" link="https://www.linkedin.com/in/bramvandeventer/" icon="mdi-linkedin"  />
     </div>
 </template>
 

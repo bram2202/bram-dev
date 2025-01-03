@@ -1,6 +1,11 @@
 <template>
     <div>
-        <a :href="link" target="_blank">{{title}}</a>
+        <a :href="link" target="_blank">
+            <span>
+                <v-icon class="logo" :icon="icon" />
+                {{ title }}
+            </span>
+        </a>
     </div>
 </template>
 
@@ -8,7 +13,8 @@
 <script setup lang="ts">
 defineProps<{
     title: string,
-    link: string
+    link: string,
+    icon: string
 }>()
 </script>
 
